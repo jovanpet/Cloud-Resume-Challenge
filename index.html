@@ -16,7 +16,7 @@
             <a href="https://github.com/jovanpet" target="_blank">Github</a> |
             <a href="https://www.linkedin.com/in/jovan-petrovic-bb2312191/" target="_blank">LinkedIn</a> |
             <a href="mailto:pjovan65@gmail.com" target="_blank">Email Me</a> |
-            <a href="https://github.com/jovanpet" target="_blank">Download PDF</a> |
+            <a href="./assets/Jovan_Petrovic.pdf" download="Jovan_petrovic_Resume" target="_blank">Download PDF</a> |
 
         </nav>
         <hr>
@@ -26,6 +26,7 @@
             <ul>
                 <li><span class="field">&#128233;: pjovan65@gmail.com</span></li>
                 <li> <span class="field">&#127961;: New York, NY</span></li>
+                <li> <span class="field">&#128336; Page Views: <span id="visitors"></span></span></li>
             </ul>
         </header>
         <hr>
@@ -276,6 +277,15 @@
         document.getElementById("skillTable").appendChild(thread)
     }
 
+    async function getVisitors() {
+        let response = await fetch('https://g72kaezkcf.execute-api.us-east-1.amazonaws.com/dev', {
+            method: 'GET',
+        });
+        let data = await response.json()
+        document.getElementById("visitors").innerHTML = data['count'];
+    }
+
+    getVisitors()
 </script>
 
 </html>
