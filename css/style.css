@@ -8,13 +8,19 @@ details,
 figcaption,
 figure,
 footer,
-header,
 hgroup,
 nav,
 section {
     display: block;
 }
 
+header {
+    display: flex;
+}
+
+.profile {
+    min-width: 30%;
+}
 
 audio:not([controls]) {
     display: none;
@@ -224,10 +230,16 @@ nav ol {
     */
 
 img {
-    border: 0;
     -ms-interpolation-mode: bicubic;
     vertical-align: middle;
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 10px;
 }
+
+/*iframe {
+    border-radius: 75%;
+}*/
 
 /*
     * Correct overflow not hidden in IE9
