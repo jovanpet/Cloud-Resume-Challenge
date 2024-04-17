@@ -2,6 +2,6 @@
 Cloud Resume Challenge
 
 To Do:
-- EKS
+- try running it with EKS
 - CI/CD for the backend
 - e2e tests
