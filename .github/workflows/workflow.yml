@@ -1,3 +1,10 @@
+name: Copy website to S3 and invalidate CloudFront Distribution
+
+on:
+  push:
+    branches:
+    - main
+
 jobs:
   copy-website-to-s3-and-invalidate-cloudfront:
     runs-on: ubuntu-latest
