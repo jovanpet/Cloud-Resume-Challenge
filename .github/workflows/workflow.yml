@@ -17,14 +17,14 @@ jobs:
           SOURCE_DIR: './ '
 
     invalidate-cloudfront-distribution:
-    needs: copy-website-to-s3-and-invalidate-cloudfront
-    runs-on: ubuntu-latest
-    steps:
-      - name: Invalidate CloudFront
-        uses: chetan/invalidate-cloudfront-action@v2
-        env:
-          DISTRIBUTION: 'E3NWLDSIIRHMB4'
-          PATHS: "/*"
-          AWS_REGION: "us-east-1"
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      needs: copy-website-to-s3-and-invalidate-cloudfront
+      runs-on: ubuntu-latest
+      steps:
+        - name: Invalidate CloudFront
+          uses: chetan/invalidate-cloudfront-action@v2
+          env:
+            DISTRIBUTION: 'E3NWLDSIIRHMB4'
+            PATHS: "/*"
+            AWS_REGION: "us-east-1"
+            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
