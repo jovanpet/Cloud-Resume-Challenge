@@ -1,7 +1,7 @@
 # Cloud Resume Challenge
 Cloud Resume Challenge
 
-Challange info: https://cloudresumechallenge.dev
+Challenge info: https://cloudresumechallenge.dev
 
 To Do:
 - try running it with EKS
