@@ -19,7 +19,7 @@ header {
 }
 
 .profile {
-    min-width: 30%;
+    min-width: 70%;
 }
 
 audio:not([controls]) {
