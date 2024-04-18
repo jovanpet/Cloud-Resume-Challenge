@@ -15,14 +15,21 @@
     <div class="container">
         <nav>
             | <a href="https://github.com/jovanpet" target="_blank">Github</a> |
-            <a href="https://www.linkedin.com/in/jovan-petrovic-bb2312191/" target="_blank">LinkedIn</a> |
+            <span>&#160;<a href="https://www.linkedin.com/in/jovan-petrovic-bb2312191/"
+                    target="_blank">LinkedIn</a>&#160;</span> |
             <a href="mailto:pjovan65@gmail.com" target="_blank">Email Me</a> |
             <a href="./assets/Jovan_Petrovic.pdf" download="Jovan_petrovic_Resume" target="_blank">Download PDF</a> |
+            <div class="switch-container">
+                <div id="switch" class="theme-switcher">
+                    <input class="sun" type="checkbox" id="sun" />
+                    <span class="moon"></span>
+                </div>
+            </div>
 
         </nav>
         <hr>
         <header>
-            <img src="assets/jovan.jpeg" alt="me" height="100" width="100">
+            <img class="jovan-image" src="assets/jovan.jpeg" alt="me" height="100" width="100">
             <div class="profile">
                 <h1 id="name">Jovan Petrovic</h1>
 
@@ -37,7 +44,9 @@
         <div class="content" role="main">
             <section id="objective">
                 <div class="description">
-                    <h2 class="title">&#129464; ABOUT ME</h2>
+                    <h2 class="title">
+                        <span class="">&#129464;</span> ABOUT ME
+                    </h2>
                     <p>
                         Hi, I'm Jovan. University of Minnesota graduate. I've spent the last 2 years diving deep
                         into the world of Backend Software Engineering at several startups across the USA. My main gig
@@ -66,7 +75,14 @@
                         <h3 class="title">AWS Certified Developer - Associate </h3>
                         <div class="meta">
                             <span class="field"><u>Validation number: 9b96857282e042a1b29c2d645abb7c34</u></span> <span
-                                class="date">APR 2027</span>
+                                class="date">APR 2024</span>
+                        </div>
+                    </section>
+                    <section class="project">
+                        <h3 class="title">CKAD</h3>
+                        <div class="meta">
+                            <span class="field"><u>Certified Kubernetes Application Developer</u></span> <span
+                                class="date">IN PROGRESS</span>
                         </div>
                     </section>
                 </div>
@@ -78,7 +94,7 @@
                     <section class="project">
                         <h3 class="title">Veza</h3>
                         <div class="meta">
-                            <span class="field"><u>Backend Software Engineer</u></span> <span class="date">FEB 2023
+                            <span class="field"><u>Software Engineer</u></span> <span class="date">FEB 2023
                                 - FEB 2024</span>
                         </div>
                         <ul>
@@ -161,9 +177,9 @@
                     <section class="project">
                         <h3 class="title">CodeDay</h3>
                         <div class="meta">
-                            <span class="field"><u>CodeLabs Intern</u></span> <span class="date">JUN 2023 -
+                            <span class="field"><u>CodeLabs Intern</u></span> <span class="date">JUN 2020 -
                                 AUG
-                                2024</span>
+                                2020</span>
                         </div>
                         <ul>
                             <li>Developed a website designed to visually depict seminal paper trees, enhancing user
@@ -345,7 +361,27 @@
         document.getElementById("visitors").innerHTML = data['count'];
     }
 
-    getVisitors()
+    //getVisitors()
+
+    let isLightTheme = true;
+
+    // Function to toggle the theme
+    function toggleTheme() {
+        isLightTheme = !isLightTheme;
+        document.body.setAttribute("data-theme", isLightTheme ? "light" : "dark");
+    }
+
+    // Get the sun checkbox element
+    const sun = document.getElementById("sun");
+
+    // Set its initial state based on the theme
+    sun.checked = isLightTheme;
+
+    // Add an event listener to toggle the theme when the checkbox changes
+    sun.addEventListener("change", toggleTheme);
+
+
+    //getVisitors()
 </script>
 
 </html>
