@@ -221,6 +221,10 @@ dd {
     margin: 0 0 0 40px;
 }
 
+nav {
+    margin-top: 8px;
+}
+
 nav ul,
 nav ol {
     list-style: none;
@@ -379,6 +383,8 @@ input {
 
 .switch-container {
     float: right;
+    display: flex;
+    height: 20px;
 }
 
 .moon {

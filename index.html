@@ -11,21 +11,21 @@
 </head>
 
 <body>
-    <br>
     <div class="container">
+        <div class="switch-container">
+            <p style="position: relative; bottom: 8px; right: 3px;">Click to change theme:</p>
+            <div id="switch" class="theme-switcher">
+                <input class="sun" type="checkbox" id="sun" />
+                <span class="moon"></span>
+            </div>
+        </div>
+        <br>
         <nav>
             | <a href="https://github.com/jovanpet" target="_blank">Github</a> |
             <span>&#160;<a href="https://www.linkedin.com/in/jovan-petrovic-bb2312191/"
                     target="_blank">LinkedIn</a>&#160;</span> |
             <a href="mailto:pjovan65@gmail.com" target="_blank">Email Me</a> |
             <a href="./assets/Jovan_Petrovic.pdf" download="Jovan_petrovic_Resume" target="_blank">Download PDF</a> |
-            <div class="switch-container">
-                <div id="switch" class="theme-switcher">
-                    <input class="sun" type="checkbox" id="sun" />
-                    <span class="moon"></span>
-                </div>
-            </div>
-
         </nav>
         <hr>
         <header>
@@ -305,8 +305,8 @@
                     <section class="project">
                         <h3 class="title">League of Legends - Ranked</h3>
                         <ul>
-                            <li>I play ranked and I am Iron league and have never made it passed it. I am quite
-                                bad.</li>
+                            <li>I play ranked and I am Iron league and have never made it passed it. It is quite a
+                                challenging video game.</li>
                             <li>Support main: Soraka</li>
                             <li>Middle main: Tristan</li>
                         </ul>
@@ -338,7 +338,7 @@
 </body>
 
 <script>
-    var skills = [["Python", 9], ["Golang", 10], ["PostgreSql", 10], ["AWS", 7], ["Kubernetes", 6], ["React", 6], ["REST API", 10], ["NoSQL", 7], ["Docker", 6]]
+    var skills = [["Python", 9], ["Golang", 10], ["PostgreSql", 10], ["MySQL", 10], ["AWS", 7], ["Kubernetes", 6], ["React", 6], ["REST API", 10], ["NoSQL", 7], ["Docker", 6], ["C/C++", 7], ["Java", 8], ["OCamel", 6]]
 
     skills.forEach(addSkills)
 
